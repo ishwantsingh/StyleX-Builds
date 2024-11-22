@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StyleX PCs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <h1>StyleX PCs</h1>
+      <p>Built to your satisfaction</p>
+    </div>
+    <nav>
+      <a href="#build">Build Your PC</a>
+      <a href="#custom-builds">Custom Builds</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome to StyleX PCs</h2>
+    <p>Build your dream gaming PC with high-quality components at competitive prices.</p>
+    <button class="cta-button" onclick="document.getElementById('build').scrollIntoView({ behavior: 'smooth' })">Start Building</button>
+  </section>
+
+  <!-- Build Your PC Section -->
+  <section id="build">
+    <h2>Build Your PC</h2>
+    <form>
+      <!-- CPU Options -->
+      <div class="form-group">
+        <label for="cpu">CPU:</label>
+        <select id="cpu" name="cpu">
+          <option value="400">Intel i9 - $400</option>
+          <option value="300">Intel i7 - $300</option>
+          <option value="250">Intel i5 - $250</option>
+          <option value="500">AMD Ryzen 9 - $500</option>
+          <option value="350">AMD Ryzen 7 - $350</option>
+          <option value="280">AMD Ryzen 5 - $280</option>
+          <option value="450">Intel i9 Extreme - $450</option>
+          <option value="320">AMD Threadripper 3960X - $320</option>
+          <option value="600">Intel Xeon W - $600</option>
+          <option value="520">AMD Ryzen 9 7950X - $520</option>
+        </select>
+      </div>
+
+      <!-- GPU Options -->
+      <div class="form-group">
+        <label for="gpu">GPU:</label>
+        <select id="gpu" name="gpu">
+          <option value="800">NVIDIA RTX 4080 - $800</option>
+          <option value="500">NVIDIA RTX 4070 - $500</option>
+          <option value="1200">NVIDIA RTX 4090 - $1200</option>
+          <option value="600">AMD RX 7900 XT - $600</option>
+          <option value="550">AMD RX 7700 XT - $550</option>
+          <option value="700">NVIDIA RTX 3080 - $700</option>
+          <option value="400">NVIDIA GTX 1660 - $400</option>
+          <option value="450">AMD RX 6700 XT - $450</option>
+          <option value="300">AMD RX 5600 XT - $300</option>
+          <option value="1000">NVIDIA RTX 4080 Founders Edition - $1000</option>
+        </select>
+      </div>
+
+      <!-- RAM Options -->
+      <div class="form-group">
+        <label for="ram">RAM:</label>
+        <select id="ram" name="ram">
+          <option value="100">16GB DDR5 - $100</option>
+          <option value="60">8GB DDR4 - $60</option>
+          <option value="150">32GB DDR5 - $150</option>
+          <option value="200">64GB DDR5 - $200</option>
+          <option value="120">16GB DDR4 - $120</option>
+          <option value="70">8GB DDR5 - $70</option>
+          <option value="80">16GB DDR3 - $80</option>
+          <option value="110">32GB DDR4 - $110</option>
+          <option value="90">16GB DDR3 HyperX - $90</option>
+          <option value="300">128GB DDR5 Corsair - $300</option>
+        </select>
+      </div>
+
+      <!-- Cooling Options -->
+      <div class="form-group">
+        <label for="cooling">Cooling System:</label>
+        <select id="cooling" name="cooling">
+          <option value="100">Corsair Liquid Cooling - $100</option>
+          <option value="120">NZXT Kraken Liquid Cooling - $120</option>
+          <option value="90">Cooler Master Hyper 212 Fan - $90</option>
+          <option value="110">Noctua NH-D15 Fan - $110</option>
+          <option value="70">Corsair Air Fan Series - $70</option>
+          <option value="150">Arctic Liquid Freezer II - $150</option>
+          <option value="60">Be Quiet! Pure Rock 2 Fan - $60</option>
+          <option value="180">Thermaltake Water 3.0 Liquid Cooling - $180</option>
+          <option value="50">Stock Intel Cooler - $50</option>
+          <option value="140">Lian Li Galahad Liquid Cooling - $140</option>
+        </select>
+      </div>
+
+      <!-- Storage Options -->
+      <div class="form-group">
+        <label for="storage">Storage:</label>
+        <select id="storage" name="storage">
+          <option value="50">1TB HDD - $50</option>
+          <option value="100">2TB HDD - $100</option>
+          <option value="70">500GB SSD - $70</option>
+          <option value="120">1TB SSD - $120</option>
+          <option value="250">2TB SSD - $250</option>
+          <option value="180">Samsung 970 EVO 1TB - $180</option>
+          <option value="90">Crucial MX500 1TB SSD - $90</option>
+          <option value="300">4TB SSD - $300</option>
+          <option value="30">500GB HDD - $30</option>
+          <option value="400">WD Black 4TB SSD - $400</option>
+        </select>
+      </div>
+
+      <!-- PSU Options -->
+      <div class="form-group">
+        <label for="psu">Power Supply Unit (PSU):</label>
+        <select id="psu" name="psu">
+          <option value="80">Corsair RM750x 750W - $80</option>
+          <option value="100">EVGA SuperNOVA 850W - $100</option>
+          <option value="120">Seasonic Focus GX-850W - $120</option>
+          <option value="90">Cooler Master MWE Gold 750W - $90</option>
+          <option value="150">Be Quiet! Dark Power Pro 12 1000W - $150</option>
+          <option value="130">Antec HCG-850 850W - $130</option>
+          <option value="110">Thermaltake Toughpower GF1 750W - $110</option>
+          <option value="160">Corsair HX1200 1200W - $160</option>
+          <option value="140">Super Flower Leadex 850W - $140</option>
+          <option value="125">FSP Hydro G Pro 850W - $125</option>
+        </select>
+      </div>
+
+      <!-- Motherboard Options -->
+      <div class="form-group">
+        <label for="motherboard">Motherboard:</label>
+        <select id="motherboard" name="motherboard">
+          <option value="150">ASUS ROG Strix Z690-A - $150</option>
+          <option value="200">MSI MPG Z490 GAMING EDGE WIFI - $200</option>
+          <option value="180">Gigabyte AORUS Z590 Pro - $180</option>
+          <option value="160">ASRock B550M Steel Legend - $160</option>
+          <option value="120">ASUS TUF Gaming B450 - $120</option>
+          <option value="250">MSI MEG X570 Unify - $250</option>
+          <option value="130">Gigabyte B550 AORUS Elite - $130</option>
+          <option value="170">EVGA Z490 FTW3 - $170</option>
+          <option value="140">ASUS Prime B550M-A - $140</option>
+          <option value="220">ASRock X570 Creator - $220</option>
+        </select>
+      </div>
+
+      <button type="button" class="primary-button" onclick="calculatePrice()">Calculate Price</button>
+      <p class="price-tag">Total Price: $<span id="total-price">0</span></p>
+    </form>
+  </section>
+
+    <!-- Custom Builds Section -->
+    <section id="custom-builds">
+        <h2>Our Custom Builds</h2>
+        <div class="custom-builds-container">
+            <div class="build">
+                <img src="images/image1.webp" alt="Custom Build 1">
+                <h3>Gaming Beast</h3>
+                <p>Intel i9 13900K, NVIDIA RTX 4090, 64GB RAM</p>
+                <p class="price-tag">$4,500</p>
+            </div>
+            <div class="build">
+                <img src="images/image2.webp" alt="Custom Build 2">
+                <h3>Budget King</h3>
+                <p>AMD Ryzen 5 7600X, NVIDIA RTX 4070, 16GB RAM</p>
+                <p class="price-tag">$2,200</p>
+            </div>
+            <div class="build">
+                <img src="images/image4.webp" alt="Custom Build 3">
+                <h3>Content Creator Pro</h3>
+                <p>AMD Ryzen 9 7950X, NVIDIA RTX 4080, 128GB RAM</p>
+                <p class="price-tag">$3,800</p>
+            </div>
+        </div>
+    </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"Excellent service and amazing build quality!"</p>
+      <p class="reviewer">- John D.</p>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>"My gaming PC exceeded my expectations. Thank you!"</p>
+      <p class="reviewer">- Sarah L.</p>
+    </div>
+    <div class="review">
+        <div class="stars">
+            ★★★★★
+        </div>
+        <p>"Absolutely love my new gaming rig! The team at StyleX PCs did an incredible job. Highly recommend!"</p>
+        <p class="reviewer">- John D.</p>
+    </div>
+    <div class="review">
+        <div class="stars">
+            ★★★★☆
+        </div>
+        <p>"Great PC for my budget. A slight delay in delivery, but otherwise very satisfied."</p>
+        <p class="reviewer">- Sarah K.</p>
+    </div>
+    <div class="review">
+        <div class="stars">
+            ★★★★★
+        </div>
+        <p>"The best custom PC builder out there! My workflow has never been smoother."</p>
+        <p class="reviewer">- Mike W.</p>
+    </div>
+    <!-- Add more reviews as needed -->
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@stylexpcs.com</p>
+    <p>Phone: +123 456 7890</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 StyleX PCs. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

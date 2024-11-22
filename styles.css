@@ -1,0 +1,195 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    color: #e63946;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header .logo h1 {
+    font-size: 2em;
+    margin: 0;
+}
+header .logo p {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+header nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+header nav a:hover {
+    color: #e63946;
+}
+
+/* Section: Home */
+#home {
+    text-align: center;
+    padding: 100px 10%;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#home h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+#home p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #6c757d;
+}
+#home .cta-button {
+    background: #e63946;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+#home .cta-button:hover {
+    background: #d62828;
+}
+
+/* Build Your PC Form */
+#build {
+    padding: 50px 10%;
+    background-color: #f8f9fa;
+}
+#build h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.primary-button {
+    background: #e63946;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: background 0.3s ease;
+}
+.primary-button:hover {
+    background: #d62828;
+}
+.price-tag {
+    text-align: center;
+    font-size: 1.5em;
+    color: #e63946;
+    margin-top: 20px;
+}
+
+/* Custom Builds Section */
+#custom-builds {
+    padding: 50px 10%;
+    background: #fff;
+    text-align: center;
+}
+.custom-builds-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.build {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.build img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.build h3 {
+    margin: 10px 0;
+    font-size: 1.3em;
+}
+.build p {
+    margin: 5px 0;
+    color: #6c757d;
+}
+
+/* Reviews Section */
+#reviews {
+    padding: 50px 10%;
+    background: #f8f9fa;
+}
+.review {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.stars {
+    color: gold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.reviewer {
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Contact Section */
+#contact {
+    padding: 30px 10%;
+    background: #fff;
+    text-align: center;
+}
+#contact p {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #f8f9fa;
+    color: #6c757d;
+    font-size: 0.9em;
+}
