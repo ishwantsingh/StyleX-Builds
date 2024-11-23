@@ -28,127 +28,297 @@
     <button class="cta-button" onclick="document.getElementById('build').scrollIntoView({ behavior: 'smooth' })">Start Building</button>
   </section>
 
-  <!-- Build Your PC Section -->
   <section id="build">
     <h2>Build Your PC</h2>
-    <form>
-      <!-- CPU Options -->
+    <form class="parts-form">
+      <!-- CPU Dropdown -->
       <div class="form-group">
         <label for="cpu">CPU:</label>
-        <select id="cpu" name="cpu">
-          <option value="400">Intel i9 - $400</option>
-          <option value="300">Intel i7 - $300</option>
-          <option value="250">Intel i5 - $250</option>
-          <option value="500">AMD Ryzen 9 - $500</option>
-          <option value="350">AMD Ryzen 7 - $350</option>
-          <option value="280">AMD Ryzen 5 - $280</option>
-          <option value="450">Intel i9 Extreme - $450</option>
-          <option value="320">AMD Threadripper 3960X - $320</option>
-          <option value="600">Intel Xeon W - $600</option>
-          <option value="520">AMD Ryzen 9 7950X - $520</option>
-        </select>
+        <div class="dropdown" id="cpu">
+          <div class="dropdown-btn">Select CPU</div>
+          <div class="dropdown-content">
+            <div class="dropdown-item" data-value="400">
+              <img src="images/intel_i9.jpg" alt="Intel i9"> Intel i9 - $400
+            </div>
+            <div class="dropdown-item" data-value="350">
+              <img src="images/intel_i7.jpg" alt="Intel i7"> Intel i7 - $350
+            </div>
+            <div class="dropdown-item" data-value="300">
+              <img src="images/intel_i5.jpg" alt="Intel i5"> Intel i5 - $300
+            </div>
+            <div class="dropdown-item" data-value="500">
+              <img src="images/amd_ryzen9.jpg" alt="AMD Ryzen 9"> AMD Ryzen 9 - $500
+            </div>
+            <div class="dropdown-item" data-value="250">
+              <img src="images/amd_ryzen7.jpg" alt="AMD Ryzen 7"> AMD Ryzen 7 - $250
+            </div>
+            <div class="dropdown-item" data-value="200">
+              <img src="images/amd_ryzen5.jpg" alt="AMD Ryzen 5"> AMD Ryzen 5 - $200
+            </div>
+            <div class="dropdown-item" data-value="220">
+              <img src="images/intel_i3.jpg" alt="Intel i3"> Intel i3 - $220
+            </div>
+            <div class="dropdown-item" data-value="480">
+              <img src="images/intel_xeon.jpg" alt="Intel Xeon"> Intel Xeon - $480
+            </div>
+            <div class="dropdown-item" data-value="600">
+              <img src="images/amd_threadripper.jpg" alt="AMD Threadripper"> AMD Threadripper - $600
+            </div>
+            <div class="dropdown-item" data-value="150">
+              <img src="images/amd_apu.jpg" alt="AMD APU"> AMD APU - $150
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- GPU Options -->
+      <!-- GPU Dropdown -->
       <div class="form-group">
         <label for="gpu">GPU:</label>
-        <select id="gpu" name="gpu">
-          <option value="800">NVIDIA RTX 4080 - $800</option>
-          <option value="500">NVIDIA RTX 4070 - $500</option>
-          <option value="1200">NVIDIA RTX 4090 - $1200</option>
-          <option value="600">AMD RX 7900 XT - $600</option>
-          <option value="550">AMD RX 7700 XT - $550</option>
-          <option value="700">NVIDIA RTX 3080 - $700</option>
-          <option value="400">NVIDIA GTX 1660 - $400</option>
-          <option value="450">AMD RX 6700 XT - $450</option>
-          <option value="300">AMD RX 5600 XT - $300</option>
-          <option value="1000">NVIDIA RTX 4080 Founders Edition - $1000</option>
-        </select>
+        <div class="dropdown" id="gpu">
+          <div class="dropdown-btn">Select GPU</div>
+          <div class="dropdown-content">
+            <div class="dropdown-item" data-value="800">
+              <img src="images/rtx4080.jpg" alt="RTX 4080"> NVIDIA RTX 4080 - $800
+            </div>
+            <div class="dropdown-item" data-value="750">
+              <img src="images/rtx4090.jpg" alt="RTX 4090"> NVIDIA RTX 4090 - $750
+            </div>
+            <div class="dropdown-item" data-value="600">
+              <img src="images/rtx4070.jpg" alt="RTX 4070"> NVIDIA RTX 4070 - $600
+            </div>
+            <div class="dropdown-item" data-value="500">
+              <img src="images/rtx3060.jpg" alt="RTX 3060"> NVIDIA RTX 3060 - $500
+            </div>
+            <div class="dropdown-item" data-value="400">
+              <img src="images/rtx3050.jpg" alt="RTX 3050"> NVIDIA RTX 3050 - $400
+            </div>
+            <div class="dropdown-item" data-value="350">
+              <img src="images/rtx1660ti.jpg" alt="RTX 1660 Ti"> NVIDIA RTX 1660 Ti - $350
+            </div>
+            <div class="dropdown-item" data-value="250">
+              <img src="images/gtx1660.jpg" alt="GTX 1660"> NVIDIA GTX 1660 - $250
+            </div>
+            <div class="dropdown-item" data-value="300">
+              <img src="images/gtx1050ti.jpg" alt="GTX 1050 Ti"> NVIDIA GTX 1050 Ti - $300
+            </div>
+            <div class="dropdown-item" data-value="550">
+              <img src="images/amd_6700xt.jpg" alt="AMD 6700 XT"> AMD 6700 XT - $550
+            </div>
+            <div class="dropdown-item" data-value="450">
+              <img src="images/amd_6600xt.jpg" alt="AMD 6600 XT"> AMD 6600 XT - $450
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- RAM Options -->
+      <!-- RAM Dropdown -->
       <div class="form-group">
         <label for="ram">RAM:</label>
-        <select id="ram" name="ram">
-          <option value="100">16GB DDR5 - $100</option>
-          <option value="60">8GB DDR4 - $60</option>
-          <option value="150">32GB DDR5 - $150</option>
-          <option value="200">64GB DDR5 - $200</option>
-          <option value="120">16GB DDR4 - $120</option>
-          <option value="70">8GB DDR5 - $70</option>
-          <option value="80">16GB DDR3 - $80</option>
-          <option value="110">32GB DDR4 - $110</option>
-          <option value="90">16GB DDR3 HyperX - $90</option>
-          <option value="300">128GB DDR5 Corsair - $300</option>
-        </select>
+        <div class="dropdown" id="ram">
+          <div class="dropdown-btn">Select RAM</div>
+          <div class="dropdown-content">
+            <div class="dropdown-item" data-value="100">
+              <img src="images/16gb_ddr4.jpg" alt="16GB DDR4"> 16GB DDR4 - $100
+            </div>
+            <div class="dropdown-item" data-value="120">
+              <img src="images/32gb_ddr4.jpg" alt="32GB DDR4"> 32GB DDR4 - $120
+            </div>
+            <div class="dropdown-item" data-value="160">
+              <img src="images/64gb_ddr4.jpg" alt="64GB DDR4"> 64GB DDR4 - $160
+            </div>
+            <div class="dropdown-item" data-value="180">
+              <img src="images/16gb_ddr5.jpg" alt="16GB DDR5"> 16GB DDR5 - $180
+            </div>
+            <div class="dropdown-item" data-value="200">
+              <img src="images/32gb_ddr5.jpg" alt="32GB DDR5"> 32GB DDR5 - $200
+            </div>
+            <div class="dropdown-item" data-value="220">
+              <img src="images/64gb_ddr5.jpg" alt="64GB DDR5"> 64GB DDR5 - $220
+            </div>
+            <div class="dropdown-item" data-value="240">
+              <img src="images/128gb_ddr4.jpg" alt="128GB DDR4"> 128GB DDR4 - $240
+            </div>
+            <div class="dropdown-item" data-value="150">
+              <img src="images/8gb_ddr4.jpg" alt="8GB DDR4"> 8GB DDR4 - $150
+            </div>
+            <div class="dropdown-item" data-value="130">
+              <img src="images/8gb_ddr5.jpg" alt="8GB DDR5"> 8GB DDR5 - $130
+            </div>
+            <div class="dropdown-item" data-value="250">
+              <img src="images/64gb_tridentz.jpg" alt="64GB Trident Z"> 64GB Trident Z - $250
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Cooling Options -->
+      <!-- Cooling Dropdown -->
       <div class="form-group">
-        <label for="cooling">Cooling System:</label>
-        <select id="cooling" name="cooling">
-          <option value="100">Corsair Liquid Cooling - $100</option>
-          <option value="120">NZXT Kraken Liquid Cooling - $120</option>
-          <option value="90">Cooler Master Hyper 212 Fan - $90</option>
-          <option value="110">Noctua NH-D15 Fan - $110</option>
-          <option value="70">Corsair Air Fan Series - $70</option>
-          <option value="150">Arctic Liquid Freezer II - $150</option>
-          <option value="60">Be Quiet! Pure Rock 2 Fan - $60</option>
-          <option value="180">Thermaltake Water 3.0 Liquid Cooling - $180</option>
-          <option value="50">Stock Intel Cooler - $50</option>
-          <option value="140">Lian Li Galahad Liquid Cooling - $140</option>
-        </select>
+        <label for="cooling">Cooling:</label>
+        <div class="dropdown" id="cooling">
+          <div class="dropdown-btn">Select Cooling</div>
+          <div class="dropdown-content">
+            <div class="dropdown-item" data-value="50">
+              <img src="images/liquid_cooling.jpg" alt="Liquid Cooling"> Liquid Cooling - $50
+            </div>
+            <div class="dropdown-item" data-value="40">
+              <img src="images/liquid_cooling_240.jpg" alt="240mm Liquid Cooling"> 240mm Liquid Cooling - $40
+            </div>
+            <div class="dropdown-item" data-value="30">
+              <img src="images/fan_cooling.jpg" alt="Fan Cooling"> Fan Cooling - $30
+            </div>
+            <div class="dropdown-item" data-value="70">
+              <img src="images/hyper_212.jpg" alt="Hyper 212"> Hyper 212 Air Cooling - $70
+            </div>
+            <div class="dropdown-item" data-value="60">
+              <img src="images/noctua_aircooling.jpg" alt="Noctua Air Cooling"> Noctua Air Cooling - $60
+            </div>
+            <div class="dropdown-item" data-value="80">
+              <img src="images/corsair_ice.jpg" alt="Corsair Ice"> Corsair Ice - $80
+            </div>
+            <div class="dropdown-item" data-value="90">
+              <img src="images/evga_frostbite.jpg" alt="EVGA Frostbite"> EVGA Frostbite - $90
+            </div>
+            <div class="dropdown-item" data-value="100">
+              <img src="images/thermalright_cooling.jpg" alt="Thermalright Cooling"> Thermalright Cooling - $100
+            </div>
+            <div class="dropdown-item" data-value="120">
+              <img src="images/raijintek_aircooling.jpg" alt="Raijintek Air Cooling"> Raijintek Air Cooling - $120
+            </div>
+            <div class="dropdown-item" data-value="140">
+              <img src="images/corsair_radiator.jpg" alt="Corsair Radiator"> Corsair Radiator - $140
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Storage Options -->
+      <!-- PSU Dropdown -->
       <div class="form-group">
-        <label for="storage">Storage:</label>
-        <select id="storage" name="storage">
-          <option value="50">1TB HDD - $50</option>
-          <option value="100">2TB HDD - $100</option>
-          <option value="70">500GB SSD - $70</option>
-          <option value="120">1TB SSD - $120</option>
-          <option value="250">2TB SSD - $250</option>
-          <option value="180">Samsung 970 EVO 1TB - $180</option>
-          <option value="90">Crucial MX500 1TB SSD - $90</option>
-          <option value="300">4TB SSD - $300</option>
-          <option value="30">500GB HDD - $30</option>
-          <option value="400">WD Black 4TB SSD - $400</option>
-        </select>
+        <label for="psu">PSU:</label>
+        <div class="dropdown" id="psu">
+          <div class="dropdown-btn">Select PSU</div>
+          <div class="dropdown-content">
+            <div class="dropdown-item" data-value="100">
+              <img src="images/corsair_750w.jpg" alt="Corsair 750W"> Corsair 750W - $100
+            </div>
+            <div class="dropdown-item" data-value="120">
+              <img src="images/seasonic_650w.jpg" alt="Seasonic 650W"> Seasonic 650W - $120
+            </div>
+            <div class="dropdown-item" data-value="140">
+              <img src="images/evga_1000w.jpg" alt="EVGA 1000W"> EVGA 1000W - $140
+            </div>
+            <div class="dropdown-item" data-value="80">
+              <img src="images/antec_550w.jpg" alt="Antec 550W"> Antec 550W - $80
+            </div>
+            <div class="dropdown-item" data-value="90">
+              <img src="images/gigabyte_600w.jpg" alt="Gigabyte 600W"> Gigabyte 600W - $90
+            </div>
+            <div class="dropdown-item" data-value="110">
+              <img src="images/thermaltake_750w.jpg" alt="Thermaltake 750W"> Thermaltake 750W - $110
+            </div>
+            <div class="dropdown-item" data-value="150">
+              <img src="images/corsair_850w.jpg" alt="Corsair 850W"> Corsair 850W - $150
+            </div>
+            <div class="dropdown-item" data-value="130">
+              <img src="images/evga_650w.jpg" alt="EVGA 650W"> EVGA 650W - $130
+            </div>
+            <div class="dropdown-item" data-value="160">
+              <img src="images/corsair_1000w.jpg" alt="Corsair 1000W"> Corsair 1000W - $160
+            </div>
+            <div class="dropdown-item" data-value="180">
+              <img src="images/seasonic_1200w.jpg" alt="Seasonic 1200W"> Seasonic 1200W - $180
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- PSU Options -->
-      <div class="form-group">
-        <label for="psu">Power Supply Unit (PSU):</label>
-        <select id="psu" name="psu">
-          <option value="80">Corsair RM750x 750W - $80</option>
-          <option value="100">EVGA SuperNOVA 850W - $100</option>
-          <option value="120">Seasonic Focus GX-850W - $120</option>
-          <option value="90">Cooler Master MWE Gold 750W - $90</option>
-          <option value="150">Be Quiet! Dark Power Pro 12 1000W - $150</option>
-          <option value="130">Antec HCG-850 850W - $130</option>
-          <option value="110">Thermaltake Toughpower GF1 750W - $110</option>
-          <option value="160">Corsair HX1200 1200W - $160</option>
-          <option value="140">Super Flower Leadex 850W - $140</option>
-          <option value="125">FSP Hydro G Pro 850W - $125</option>
-        </select>
-      </div>
-
-      <!-- Motherboard Options -->
+      <!-- Motherboard Dropdown -->
       <div class="form-group">
         <label for="motherboard">Motherboard:</label>
-        <select id="motherboard" name="motherboard">
-          <option value="150">ASUS ROG Strix Z690-A - $150</option>
-          <option value="200">MSI MPG Z490 GAMING EDGE WIFI - $200</option>
-          <option value="180">Gigabyte AORUS Z590 Pro - $180</option>
-          <option value="160">ASRock B550M Steel Legend - $160</option>
-          <option value="120">ASUS TUF Gaming B450 - $120</option>
-          <option value="250">MSI MEG X570 Unify - $250</option>
-          <option value="130">Gigabyte B550 AORUS Elite - $130</option>
-          <option value="170">EVGA Z490 FTW3 - $170</option>
-          <option value="140">ASUS Prime B550M-A - $140</option>
-          <option value="220">ASRock X570 Creator - $220</option>
-        </select>
+        <div class="dropdown" id="motherboard">
+          <div class="dropdown-btn">Select Motherboard</div>
+          <div class="dropdown-content">
+            <div class="dropdown-item" data-value="200">
+              <img src="images/asus_x570.jpg" alt="ASUS X570"> ASUS X570 - $200
+            </div>
+            <div class="dropdown-item" data-value="150">
+              <img src="images/msi_b450.jpg" alt="MSI B450"> MSI B450 - $150
+            </div>
+            <div class="dropdown-item" data-value="180">
+              <img src="images/asrock_b550.jpg" alt="ASRock B550"> ASRock B550 - $180
+            </div>
+            <div class="dropdown-item" data-value="100">
+              <img src="images/gigabyte_b360.jpg" alt="Gigabyte B360"> Gigabyte B360 - $100
+            </div>
+            <div class="dropdown-item" data-value="220">
+              <img src="images/msi_z590.jpg" alt="MSI Z590"> MSI Z590 - $220
+            </div>
+            <div class="dropdown-item" data-value="250">
+              <img src="images/asus_rog_strix_z590.jpg" alt="ASUS ROG Strix Z590"> ASUS ROG Strix Z590 - $250
+            </div>
+            <div class="dropdown-item" data-value="170">
+              <img src="images/gigabyte_b550m.jpg" alt="Gigabyte B550M"> Gigabyte B550M - $170
+            </div>
+            <div class="dropdown-item" data-value="130">
+              <img src="images/asus_prime_b460m.jpg" alt="ASUS Prime B460M"> ASUS Prime B460M - $130
+            </div>
+            <div class="dropdown-item" data-value="210">
+              <img src="images/evga_x299.jpg" alt="EVGA X299"> EVGA X299 - $210
+            </div>
+            <div class="dropdown-item" data-value="140">
+              <img src="images/asrock_h470.jpg" alt="ASRock H470"> ASRock H470 - $140
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <!-- Add dropdown for PC Case -->
+     <div class="form-group">
+      <label for="Case">PC Case:</label>
+      <div class="dropdown" id="case">
+        <div class="dropdown-btn">Select PC Case</div>
+        <div class="dropdown-content">
+          <div class="dropdown-item" data-value="100">
+            <img src="images/corsair-4000d.jpg" alt="Corsair 4000D Airflow" class="dropdown-img">
+            Corsair 4000D Airflow - $100
+          </div>
+          <div class="dropdown-item" data-value="120">
+            <img src="images/nzxt-h510.jpg" alt="NZXT H510" class="dropdown-img">
+            NZXT H510 - $120
+          </div>
+          <div class="dropdown-item" data-value="80">
+            <img src="images/cm-q300l.jpg" alt="Cooler Master MasterBox Q300L" class="dropdown-img">
+            Cooler Master MasterBox Q300L - $80
+          </div>
+          <div class="dropdown-item" data-value="140">
+            <img src="images/fractal-meshify-c.jpg" alt="Fractal Design Meshify C" class="dropdown-img">
+            Fractal Design Meshify C - $140
+          </div>
+          <div class="dropdown-item" data-value="110">
+            <img src="images/thermaltake-v200.jpg" alt="Thermaltake V200" class="dropdown-img">
+            Thermaltake V200 - $110
+          </div>
+          <div class="dropdown-item" data-value="90">
+            <img src="images/be-quiet-pure-base.jpg" alt="Be Quiet! Pure Base 500DX" class="dropdown-img">
+            Be Quiet! Pure Base 500DX - $90
+          </div>
+          <div class="dropdown-item" data-value="75">
+            <img src="images/lian-li-pc011.jpg" alt="Lian Li PC-011 Dynamic" class="dropdown-img">
+            Lian Li PC-011 Dynamic - $75
+          </div>
+          <div class="dropdown-item" data-value="130">
+            <img src="images/phanteks-p400a.jpg" alt="Phanteks Eclipse P400A" class="dropdown-img">
+            Phanteks Eclipse P400A - $130
+          </div>
+          <div class="dropdown-item" data-value="160">
+            <img src="images/cm-c700p.jpg" alt="Cooler Master Cosmos C700P" class="dropdown-img">
+            Cooler Master Cosmos C700P - $160
+          </div>
+          <div class="dropdown-item" data-value="200">
+            <img src="images/nzxt-h510-elite.jpg" alt="NZXT H510 Elite" class="dropdown-img">
+            NZXT H510 Elite - $200
+          </div>
+        </div>
+      </div>
       </div>
 
       <button type="button" class="primary-button" onclick="calculatePrice()">Calculate Price</button>
